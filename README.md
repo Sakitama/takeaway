@@ -1,6 +1,6 @@
 # takeaway
 
-基于Vue.js 2.0高仿饿了么外卖App
+基于Vue.js 2.0开发一个外卖App
 
 ## Build Setup
 
