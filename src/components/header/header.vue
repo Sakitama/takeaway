@@ -119,7 +119,7 @@
         display inline-block
         margin-left 16px
         .title
-          margin 2px 0 8px 0
+          margin 2px 0 8px
           .brand
             display inline-block
             vertical-align top
@@ -213,7 +213,7 @@
       filter: blur(10px)
     .detail
       position fixed
-      z-index 2
+      z-index 90
       top 0
       left 0
       width 100%
@@ -221,12 +221,10 @@
       overflow auto
       background rgba(7, 17, 27, .8)
       backdrop-filter blur(10px)
-      &.fade-enter-active, &.fade-leave-active {
-        transition: opacity .5s
-      }
-      &.fade-enter, &.fade-leave-active {
-        opacity: 0
-      }
+      &.fade-enter-active, &.fade-leave-active
+        transition opacity .5s
+      &.fade-enter, &.fade-leave-active
+        opacity 0
       .detail-wrapper
         width 100%
         min-height 100%
@@ -245,7 +243,7 @@
           .detail-title
             display flex
             width 80%
-            margin 28px auto 24px auto
+            margin 28px auto 24px
             .detail-line
               flex 1
               position relative

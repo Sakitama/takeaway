@@ -2,7 +2,7 @@
   <div id="app">
     <takeaway-header :seller="seller"></takeaway-header>
     <takeaway-tab></takeaway-tab>
-    <router-view></router-view>
+    <router-view :seller="seller"></router-view>
   </div>
 </template>
 

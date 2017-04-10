@@ -26,6 +26,7 @@
       },
       itemClasses () {
         let result = []
+        // Math.floor(2.6 * 2) / 2 = 2.5,Math.floor(2.4 * 2) / 2 = 2,Math.floor(2.5 * 2) / 2 = 2.5
         let score = Math.floor(this.score * 2) / 2
         let hasDecimal = score % 1 !== 0
         let integer = Math.floor(score)

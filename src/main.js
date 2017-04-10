@@ -14,5 +14,11 @@ Vue.config.productionTip = false
 new Vue({
   el: '#takeaway',
   router,
-  components: { App }
+  components: {
+    App
+  },
+  // 中央事件总线用于事件派发与接收
+  data: {
+    eventHub: new Vue()
+  }
 })
