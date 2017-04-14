@@ -12,7 +12,7 @@
         <li v-for="menuItem in goods" class="foods-list foods-list-hook">
           <h1 class="foods-menu">{{ menuItem.name }}</h1>
           <ul>
-            <li v-for="foodsItem in menuItem.foods" class="foods-item border-1px">
+            <li @click="selectFood(foodsItem, $event)" v-for="foodsItem in menuItem.foods" class="foods-item border-1px">
               <div class="foods-item-image">
                 <img width="57" height="57" :src="foodsItem.icon">
               </div>
@@ -35,6 +35,7 @@
       </ul>
     </div>
     <shoppingCart ref="shoppingCart" :deliveryPrice="seller.deliveryPrice" :minPrice="seller.minPrice" :selectFoods="selectFoods"></shoppingCart>
+    <foodDetail ref="foodDetail" :selectedFood="selectedFood"></foodDetail>
   </div>
 </template>
 
@@ -42,6 +43,7 @@
   import BScroll from 'better-scroll'
   import shoppingCart from '@/components/shoppingCart/shoppingCart'
   import cartControl from '@/components/cartControl/cartControl'
+  import foodDetail from '@/components/foodDetail/foodDetail'
 
   const ERR_OK = 0
 
@@ -72,7 +74,8 @@
       return {
         goods: this.goods,
         listHeight: [],
-        scrollY: 0
+        scrollY: 0,
+        selectedFood: {}
       }
     },
     // 判断滚动偏移量在哪个区块范围内去高亮对应的菜单项，返回菜单项的索引
@@ -87,7 +90,7 @@
         }
         return 0
       },
-      // 获取选择的菜品对象，返回一个数组
+      // 获取选择的商品对象，返回一个数组
       selectFoods () {
         let foods = []
         this.goods.forEach((good) => {
@@ -139,12 +142,21 @@
         this.$nextTick(() => {
           this.$refs.shoppingCart._drop(target)
         })
+      },
+      selectFood (food, event) {
+        // 过滤掉原生事件，使用 better-scroll 的派发事件
+        if (!event._constructed) {
+          return
+        }
+        this.selectedFood = food
+        this.$refs.foodDetail.showFoodDetail()
       }
     },
     name: 'goods',
     components: {
       shoppingCart,
-      cartControl
+      cartControl,
+      foodDetail
     }
   }
 </script>

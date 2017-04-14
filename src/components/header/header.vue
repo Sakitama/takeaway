@@ -222,7 +222,7 @@
       background rgba(7, 17, 27, .8)
       backdrop-filter blur(10px)
       &.fade-enter-active, &.fade-leave-active
-        transition opacity .5s
+        transition opacity .2s linear
       &.fade-enter, &.fade-leave-active
         opacity 0
       .detail-wrapper

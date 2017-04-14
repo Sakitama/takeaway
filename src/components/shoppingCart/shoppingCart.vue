@@ -173,13 +173,13 @@
         this.$nextTick(() => {
           el.style.webkitTransform = 'translate3d(0, 0, 0)'
           el.style.transform = 'translate3d(0, 0, 0)'
-          el.style.webkitTransition = 'all .4s cubic-bezier(.49, -0.29, .75, .41)'
-          el.style.transition = 'all .4s cubic-bezier(.49, -0.29, .75, .41)'
+          el.style.webkitTransition = 'all .3s cubic-bezier(.49, -0.29, .75, .41)'
+          el.style.transition = 'all .3s cubic-bezier(.49, -0.29, .75, .41)'
           let ballInner = el.getElementsByClassName('ball-inner-hook')[0]
           ballInner.style.webkitTransform = 'translate3d(0, 0, 0)'
           ballInner.style.transform = 'translate3d(0, 0, 0)'
-          ballInner.style.webkitTransition = 'all .4s linear'
-          ballInner.style.transition = 'all .4s linear'
+          ballInner.style.webkitTransition = 'all .3s linear'
+          ballInner.style.transition = 'all .3s linear'
         })
       },
       afterEnter (el) {
@@ -332,10 +332,10 @@
       &.shopping-cart-list-fade-enter
         transform translate3d(0, 0, 0)
       &.shopping-cart-list-fade-enter-active
-        transition all .4s linear
+        transition all .2s linear
       &.shopping-cart-list-fade-leave-active
         transform translate3d(0, 0, 0)
-        transition all .4s linear
+        transition all .2s linear
       .shopping-cart-list-header
         height 40px
         line-height 40px
@@ -388,8 +388,8 @@
       &.shopping-cart-mask-fade-enter
         opacity 0
       &.shopping-cart-mask-fade-enter-active
-        transition all .4s linear
+        transition all .2s linear
       &.shopping-cart-mask-fade-leave-active
         opacity 0
-        transition all .4s linear
+        transition all .2s linear
 </style>
