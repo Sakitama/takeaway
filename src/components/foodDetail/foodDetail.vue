@@ -70,7 +70,16 @@
         // 仅仅改变数据的时候 DOM 还没更新。将回调延迟到下次 DOM 更新循环之后执行。在修改数据之后立即使用它，然后等待 DOM 更新。
         // 不使用的话会因为评论过滤导致 better-scroll 高度计算不正确。
         this.$nextTick(() => {
-          this.foodDetailScroll.refresh()
+          // 假设在商家评论页刷新， ratings 组件先渲染，点击评论类型按钮时表现正常
+          // 当切到商品页，foodDetail 组件被加载，再回到商家评论页点击评论类型按钮
+          // 会发现“read property refresh of undefined”
+          // 是因为切到商品页之后，foodDetail 组件被加载，也注册了 ratingsSelect 事件的响应
+          // 在商家评论页点击评论类型按钮的时候派发的 ratingsSelect 事件被 foodDetail 组件捕获到了
+          // 但是此时 foodDetailScroll 为 undefined，导致出现上面的错误，所以这里加了一个判断
+          // rateWithContent 事件同理
+          if (this.foodDetailScroll) {
+            this.foodDetailScroll.refresh()
+          }
         })
       })
       // 监听来自 ratingsSelect 组件派发的事件 rateWithContent
@@ -79,7 +88,9 @@
         // 仅仅改变数据的时候 DOM 还没更新。将回调延迟到下次 DOM 更新循环之后执行。在修改数据之后立即使用它，然后等待 DOM 更新。
         // 不使用的话会因为评论过滤导致 better-scroll 高度计算不正确。
         this.$nextTick(() => {
-          this.foodDetailScroll.refresh()
+          if (this.foodDetailScroll) {
+            this.foodDetailScroll.refresh()
+          }
         })
       })
     },
@@ -253,6 +264,8 @@
             position relative
             padding 16px 0
             border-1px(rgba(7, 17, 27, .1))
+            &:last-child
+              border-none()
             .food-detail-content-ratings-list-rate-item-user
               position absolute
               right 0

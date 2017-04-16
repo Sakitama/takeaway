@@ -1,6 +1,6 @@
 {
   "seller": {
-    "name": "粥品香坊（回龙观）",
+    "name": "有家厨房（荔馨村店）",
     "description": "蜂鸟专送",
     "deliveryTime": 38,
     "score": 4.2,
@@ -11,7 +11,7 @@
     "deliveryPrice": 4,
     "ratingCount": 24,
     "sellCount": 90,
-    "bulletin": "粥品香坊其烹饪粥料的秘方源于中国千年古法，在融和现代制作工艺，由世界烹饪大师屈浩先生领衔研发。坚守纯天然、0添加的良心品质深得消费者青睐，发展至今成为粥类的引领品牌。是2008年奥运会和2013年园博会指定餐饮服务商。",
+    "bulletin": "精心料理，探寻你心中的味道。明厨亮灶，为你的健康负责。有家厨房，用心做好每一份饭，让美好生活从吃饭开始。本店调料的秘方源于中国千年古法，在融和现代制作工艺，由世界烹饪大师屈浩先生领衔研发。坚守纯天然、零添加的良心品质深得消费者青睐，发展至今成为餐饮界的引领品牌。是2008年奥运会和2013年园博会指定餐饮服务商。本店以菜品多样化，舒适的用餐环境以及实惠的价钱去为客人服务。本店主打麻辣菜系，给您忙碌平淡的生活增添一点浓妆艳抹的麻辣重口味，口口过瘾！",
     "supports": [
       {
         "type": 0,
@@ -34,7 +34,7 @@
         "description": "已加入“外卖保”计划,食品安全保障"
       }
     ],
-    "avatar": "http://static.galileo.xiaojukeji.com/static/tms/seller_avatar_256px.jpg",
+    "avatar": "https://fuss10.elemecdn.com/5/56/043a6636f98125fb62dbd60824ca2jpeg.jpeg?imageMogr2/thumbnail/95x95/format/webp/quality/85",
     "pics": [
       "http://fuss10.elemecdn.com/8/71/c5cf5715740998d5040dda6e66abfjpeg.jpeg?imageView2/1/w/180/h/180",
       "http://fuss10.elemecdn.com/b/6c/75bd250e5ba69868f3b1178afbda3jpeg.jpeg?imageView2/1/w/180/h/180",
@@ -44,7 +44,7 @@
     "infos": [
       "该商家支持发票,请下单写好发票抬头",
       "品类:其他菜系,包子粥店",
-      "北京市昌平区回龙观西大街龙观置业大厦底商B座102单元1340",
+      "深圳市南山区南头街道荔馨村A1栋121号",
       "营业时间:10:00-20:30"
     ]
   },
@@ -916,6 +916,182 @@
       ]
     },
     {
+      "name": "小香锅一人餐",
+      "type": -1,
+      "foods": [
+        {
+          "name": "蛙蛙锅",
+          "price": 28,
+          "oldPrice": "",
+          "description": "中辣",
+          "sellCount": 188,
+          "rating": 96,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 1,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "https://fuss10.elemecdn.com/1/bd/14b1c1ee5e031772c240d7a9d38a6jpeg.jpeg?imageMogr2/thumbnail/100x100/format/webp/quality/85",
+          "image": "https://fuss10.elemecdn.com/1/bd/14b1c1ee5e031772c240d7a9d38a6jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/85"
+        },
+        {
+          "name": "山谷嫩鸭香锅",
+          "price": 28,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 124,
+          "rating": 85,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "没啥味道",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 1,
+              "text": "很一般啊",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "https://fuss10.elemecdn.com/0/bf/a9390df7a4c527ec1def3843530bfjpeg.jpeg?imageMogr2/thumbnail/100x100/format/webp/quality/85",
+          "image": "https://fuss10.elemecdn.com/0/bf/a9390df7a4c527ec1def3843530bfjpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/85"
+        },
+        {
+          "name": "酥鱼脆香锅",
+          "price": 28,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 114,
+          "rating": 91,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "难吃不推荐",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "https://fuss10.elemecdn.com/8/e7/19b787a4a1f8c6b54515046e22963jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/85",
+          "image": "https://fuss10.elemecdn.com/8/e7/19b787a4a1f8c6b54515046e22963jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/85"
+        },
+        {
+          "name": "肥肠鸡香锅",
+          "price": 28,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 101,
+          "rating": 78,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "不脆,不好吃",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "https://fuss10.elemecdn.com/d/93/12c3f93d7b3b4e4bba7b9fb29f297jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/85",
+          "image": "https://fuss10.elemecdn.com/d/93/12c3f93d7b3b4e4bba7b9fb29f297jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/85"
+        },
+        {
+          "name": "海鲜荟香锅",
+          "price": 76,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 80,
+          "rating": 93,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "https://fuss10.elemecdn.com/6/2e/47ce7955a4598a9ae58f5d7c89bfdjpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/85",
+          "image": "https://fuss10.elemecdn.com/6/2e/47ce7955a4598a9ae58f5d7c89bfdjpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/85"
+        }
+      ]
+    },
+    {
       "name": "特色粥品",
       "type": -1,
       "foods": [
@@ -1147,7 +1323,6 @@
       "deliveryTime": "",
       "score": 4,
       "rateType": 0,
-      "deliveryTime": "",
       "text": "服务态度不错",
       "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
       "recommend": [

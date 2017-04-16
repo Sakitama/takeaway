@@ -2,11 +2,14 @@
   <div id="app">
     <takeaway-header :seller="seller"></takeaway-header>
     <takeaway-tab></takeaway-tab>
-    <router-view :seller="seller"></router-view>
+    <keep-alive>
+      <router-view :seller="seller" :goods="goods" :ratings="ratings"></router-view>
+    </keep-alive>
   </div>
 </template>
 
 <script>
+  import { urlParse } from '@/common/js/util'
   import takeawayHeader from '@/components/header/header'
   import takeawayTab from '@/components/tab/tab'
 
@@ -15,16 +18,36 @@
   export default {
     name: 'app',
     created () {
-      this.$http.get('/api/seller').then(response => {
+      // 模拟请求某一个商家，id 代表商家的 id
+      this.$http.get('/api/seller?id=' + this.id).then(response => {
         response = response.body
         if (response.errorNumber === ERR_OK) {
           this.seller = response.data
+          this.seller.id = this.id
+        }
+      })
+      this.$http.get('/api/goods').then(response => {
+        response = response.body
+        if (response.errorNumber === ERR_OK) {
+          this.goods = response.data
+        }
+      })
+      this.$http.get('/api/ratings').then(response => {
+        response = response.body
+        if (response.errorNumber === ERR_OK) {
+          this.ratings = response.data
         }
       })
     },
     data () {
       return {
-        seller: this.seller
+        id: (() => {
+          let queryParam = urlParse()
+          return queryParam.id
+        })(),
+        seller: this.seller,
+        goods: this.goods,
+        ratings: this.ratings
       }
     },
     components: {

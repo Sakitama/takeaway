@@ -45,41 +45,51 @@
   import cartControl from '@/components/cartControl/cartControl'
   import foodDetail from '@/components/foodDetail/foodDetail'
 
-  const ERR_OK = 0
-
   export default {
-    props: {
-      seller: {
-        type: Object
-      }
-    },
-    created () {
-      this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee']
-      this.$http.get('/api/goods').then(response => {
-        response = response.body
-        if (response.errorNumber === ERR_OK) {
-          this.goods = response.data
-          this.$nextTick(() => {
-            this.initScroll()
-            this.calculateHeight()
-          })
-        }
-      })
-      // 监听来自 cartControl 组件派发的事件 cartAdd
-      this.$root.eventHub.$on('cartAdd', (target) => {
-        this.drop(target)
-      })
-    },
     data () {
       return {
-        goods: this.goods,
         listHeight: [],
         scrollY: 0,
         selectedFood: {}
       }
     },
-    // 判断滚动偏移量在哪个区块范围内去高亮对应的菜单项，返回菜单项的索引
+    props: {
+      seller: {
+        type: Object
+      },
+      goods: {
+        type: Array
+      }
+    },
+    watch: {
+      goods () {
+        this.$nextTick(function () {
+          this._initScroll()
+          this._calculateHeight()
+        })
+      }
+    },
+    // 在商品页刷新的时候会先调用 mounted，但此时 this.goods 和 DOM 都没有准备好，所以跳过
+    // 当 this.goods 准备好的时候，调用 watch，此时 DOM 也已经准备好了
+    // 如果在其他页刷新，再切到商品页，会先调用 mounted，此时 this.goods 和 DOM 已经准备好，判断通过
+    // 之后在各个页面切换，由于 keep-alive，所以无需使用 better-scroll 对象的 refresh 方法
+    mounted () {
+      if (this.$refs['menu-wrapper'] && this.$refs['foods-wrapper']) {
+        this.$nextTick(function () {
+          this._initScroll()
+          this._calculateHeight()
+        })
+      }
+    },
+    created () {
+      this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee']
+      // 监听来自 cartControl 组件派发的事件 cartAdd
+      this.$root.eventHub.$on('cartAdd', (target) => {
+        this.drop(target)
+      })
+    },
     computed: {
+      // 判断滚动偏移量在哪个区块范围内去高亮对应的菜单项，返回菜单项的索引
       currentIndex () {
         for (let i = 0; i < this.listHeight.length; i++) {
           let start = this.listHeight[i]
@@ -104,7 +114,7 @@
       }
     },
     methods: {
-      initScroll () {
+      _initScroll () {
         this.menuScroll = new BScroll(this.$refs['menu-wrapper'], {
           click: true
         })
@@ -118,7 +128,7 @@
         })
       },
       // 计算所有区块的纵坐标
-      calculateHeight () {
+      _calculateHeight () {
         let height = 0
         let foodsList = this.$refs['foods-wrapper'].getElementsByClassName('foods-list-hook')
         this.listHeight.push(height)
